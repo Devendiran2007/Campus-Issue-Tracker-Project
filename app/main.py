@@ -15,3 +15,7 @@ app.include_router(auth.router)
 def read_root():
     return {"Hello": "This is From Backend"} 
 
+@app.get("/status")
+def read_status():
+    return {"status": "API is running"}
+
